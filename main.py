@@ -1,5 +1,4 @@
 # Ejercicio 7.1
-'''
 tuple = (4,3,2,1)
 tuple2 = (1,2,3,4)
 
@@ -84,7 +83,6 @@ campañaElectoral4(tu2, 0, 2)
 print("\t")
 
 #Ejercicio 7.5
-'''
 l = []
 l2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
