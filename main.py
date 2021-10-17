@@ -3,10 +3,12 @@ tuple = (4,3,2,1)
 tuple2 = (1,2,3,4)
 
 def ordenar(tuple):
-    if tuple[0] > tuple[1]:
-        print("De mayor a menor")
-    elif tuple[0] < tuple[1]:
-        print("De menor a mayor")
+    ordenar = True
+    if len(tuple) > 1:
+        for i in range(0, len(tuple) - 2):
+            if tuple[i] > tuple[i + 1]:
+                ordenar = False
+    return print(ordenar)
 
 ordenar(tuple)
 ordenar(tuple2)
@@ -18,7 +20,7 @@ t2 = (4,5)
 
 # 1
 def domino1(t1, t2):
-    if t1[1] == t2[0] or t1[1] == t2[1]:
+    if t1[1] == t2[0] or t1[1] == t2[1] or t1[0] == t2[1] or t1[0] == t2[0]:
         print("Encaja")
     else:
         print("No encaja")
@@ -41,7 +43,9 @@ def domino2(l1, l2):
 
 
 domino2(l1, l2)
+
 #Ejercicio 7.3
+
 # 1
 
 tu = ("Fran", "Javier", "Lucia", "Lucas", "Ana")
@@ -83,9 +87,9 @@ campañaElectoral4(tu2, 0, 2)
 print("\t")
 
 #Ejercicio 7.5
+
 l = []
 l2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-
 
 # 1
 def primos(l, l2):
@@ -102,11 +106,13 @@ primos(l, l2)
 print(l)
 
 # 2
+
 print(sum(l2))
 print(sum(l2) / len(l2))
 
 
 # 3
+
 l3 = []
 def factorial(l, l2):
     for n in l2:
