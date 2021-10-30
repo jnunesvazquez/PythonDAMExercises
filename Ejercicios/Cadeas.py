@@ -65,3 +65,33 @@ def cadeaReplace3(cadea, caracter):
 
 cadeaReplace3(cadea1, ".")
 
+#Exercicio 6.6
+
+# 3
+def reemprazoVogal (palabra):
+    """ordeV = {1:'a',
+             2:'e',
+             3:'i',
+             4:'o',
+             5:'u'}"""
+    vogais ="aeiou"
+    ordeV = { 'a':1,
+              'e':2,
+              'i':3,
+              'o':4,
+              'u':5}
+    novaPalabra = list()
+    for i in range (len (palabra)):
+        caracter = palabra[i]
+        if caracter in ordeV.keys():
+            if ordeV[caracter] == 5 :
+                novaPalabra[i] = vogais[0]
+            else:
+                novaPalabra.append(vogais[ordeV[caracter]])
+        else:
+            novaPalabra.append(caracter)
+    return str(novaPalabra)
+
+print (reemprazoVogal ("frigorifico"))
+
+

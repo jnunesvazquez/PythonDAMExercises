@@ -62,3 +62,23 @@ def dadosDiccionario():
     print(l)
 
 dadosDiccionario()
+
+#Exercicio 8.4
+
+def cadeaLongaPorCaracteresEnTexto (texto):
+    d = dict()
+    palabras = texto.split()
+    for i in range (len(texto)):
+        caracter = texto[i]
+        if caracter != ' ':
+            if not caracter in d:
+                for palabra in palabras:
+                    if palabra.count (caracter) != 0:
+                        if caracter in d:
+                            if len(d[caracter]) < len (palabra):
+                                d [caracter] = palabra
+                        else:
+                            d [caracter] = palabra
+    return d
+
+print (cadeaLongaPorCaracteresEnTexto("A estaba oscuro e paixaxe funebre"))
